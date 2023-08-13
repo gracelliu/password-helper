@@ -3,9 +3,7 @@ import random
 import string
 
 def open_password_generator():
-
     def generate_password():
-
         # Get the user inputs
         password_length = int(length_entry.get())
         use_uppercase = uppercase_var.get()
@@ -52,15 +50,17 @@ def open_password_generator():
     length_entry = tk.Entry(root, font=("Helvetica", 12))
     length_entry.pack()
 
+    # Initialize BooleanVar variables for the checkboxes
     uppercase_var = tk.BooleanVar()
+    digits_var = tk.BooleanVar()
+    special_chars_var = tk.BooleanVar()
+
     uppercase_check = tk.Checkbutton(root, text="Case sensitive", variable=uppercase_var, font=("Helvetica", 12), bg='#f2f2f2')
     uppercase_check.pack()
 
-    digits_var = tk.BooleanVar()
     digits_check = tk.Checkbutton(root, text="Digits", variable=digits_var, font=("Helvetica", 12), bg='#f2f2f2')
     digits_check.pack()
 
-    special_chars_var = tk.BooleanVar()
     special_chars_check = tk.Checkbutton(root, text="Special Characters", variable=special_chars_var, font=("Helvetica", 12), bg='#f2f2f2')
     special_chars_check.pack()
 
@@ -71,3 +71,6 @@ def open_password_generator():
     result_label.pack()
 
     root.mainloop()
+
+if __name__ == "__main__":
+    open_password_generator()

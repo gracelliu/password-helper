@@ -35,7 +35,7 @@ def open_password_checker():
         else:
             password_label.config(text="nuh uh", fg="red")
 
-    # Create the main window
+    # Create the src window
     root = tk.Tk()
     root.title("Password Strength Checker")
 
@@ -88,3 +88,6 @@ def open_password_checker():
     tk.Label(criteria_frame, textvariable=special_var, bg='#f2f2f2').grid(row=4, column=1)
 
     root.mainloop()
+
+if __name__ == '__main__':
+    open_password_checker()
